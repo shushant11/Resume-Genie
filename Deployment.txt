@@ -2,7 +2,7 @@ sudo apt update
 sudo apt-get update
 sudo apt upgrade -y
 sudo apt install git curl unzip tar make sudo vim wget -y
-git clone https://github.com/pik1989/Elephant-Classification.git
+git clone https://github.com/shushant11/Resume-Genie.git
 sudo apt install python3-pip
 
 '''
