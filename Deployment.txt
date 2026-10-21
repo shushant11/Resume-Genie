@@ -1,27 +1,26 @@
+# ---- 1. One-time server setup ----
 sudo apt update
-sudo apt-get update
 sudo apt upgrade -y
-sudo apt install git curl unzip tar make sudo vim wget -y
-git clone https://github.com/shushant11/Resume-Genie.git
-sudo apt install python3-pip
+sudo apt install -y git curl unzip tar make sudo vim wget python3-pip python3-venv python3-full
 
-'''
-sudo apt update
-sudo apt install python3-venv python3-full -y
+# ---- 2. Get the code (already done, so skip this) ----
+# git clone https://github.com/shushant11/Resume-Genie.git
+cd ~/Resume-Genie
 
-# 2. In your project folder
-cd ~/Cancer-Risk-Prediction
-
-# 3. Create a virtual environment (named .venv – the dot makes it hidden)
+# ---- 3. Create and activate a virtual environment ----
 python3 -m venv .venv
-
-# 4. Activate it
 source .venv/bin/activate
-'''
 
-pip3 install -r requirements.txt
+# ---- 4. Install dependencies (inside the venv) ----
+pip install -r requirements.txt
 
-#Temporary running
-python3 -m streamlit run app.py
-#Permanent running
-nohup python3 -m streamlit run app.py
+# ---- 5a. Temporary run (stops when you close the terminal) ----
+python -m streamlit run app.py --server.address 0.0.0.0 --server.port 8501
+
+# ---- 5b. Permanent run (keeps running after you disconnect) ----
+nohup .venv/bin/python -m streamlit run app.py --server.address 0.0.0.0 --server.port 8501 > app.log 2>&1 &
+
+# Useful commands
+tail -f app.log          # watch the logs (Ctrl+C stops watching, not the app)
+pgrep -af streamlit      # check the app is running
+pkill -f "streamlit run" # stop the app
