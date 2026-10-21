@@ -9,7 +9,7 @@
 ![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?logo=google&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-7D3ADF)
 
-![Resume Genie home page](docs/home.png)
+![Resume Genie home page](docs/01-home.png)
 
 ---
 
@@ -34,11 +34,11 @@ Results are shown as rich, interactive views rather than plain text: score donut
 
 | Resume Evaluator | Resume Scorer |
 |:---:|:---:|
-| ![Resume Evaluator](docs/evaluator.png) | ![Resume Scorer](docs/scorer.png) |
+| ![Resume Evaluator](docs/02-evaluator.png) | ![Resume Scorer](docs/04-scorer.png) |
 
 | Cover Letter Generator | Career Coach |
 |:---:|:---:|
-| ![Cover Letter Generator](docs/cover-letter.png) | ![Career Coach](docs/career-coach.png) |
+| ![Cover Letter Generator](docs/05-cover-letter.png) | ![Career Coach](docs/06-career-coach.png) |
 
 ## 🚀 Getting Started
 
